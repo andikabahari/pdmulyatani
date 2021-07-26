@@ -183,7 +183,7 @@ ALTER TABLE `pesanan`
 -- Ketidakleluasaan untuk tabel `absen`
 --
 ALTER TABLE `absen`
-  ADD CONSTRAINT `absen_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `absen_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `pegawai`
@@ -195,7 +195,7 @@ ALTER TABLE `pegawai`
 -- Ketidakleluasaan untuk tabel `pesanan`
 --
 ALTER TABLE `pesanan`
-  ADD CONSTRAINT `pesanan_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `pesanan_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
