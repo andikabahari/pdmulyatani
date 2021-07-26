@@ -186,7 +186,7 @@ ALTER TABLE `pesanan`
 -- Constraints for table `absen`
 --
 ALTER TABLE `absen`
-  ADD CONSTRAINT `absen_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE SET CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `absen_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `pegawai`
