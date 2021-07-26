@@ -20,7 +20,8 @@ class Absen extends CI_Controller {
     {
         $this->auth_lib->redirect_if_not_authenticated('auth');
 
-        $pegawai = $this->pegawai_model->all();
+        $where = array('posisi' => 'Tetap');
+        $pegawai = $this->pegawai_model->where($where);
 
         $view_data = compact('pegawai');
 
@@ -31,13 +32,14 @@ class Absen extends CI_Controller {
     {
         $this->auth_lib->redirect_if_not_authenticated('auth');
 
-        $today = date('Y-m-d');
-        $where = array(
-            'date(absen.waktu_masuk)' => $today,
-            'absen.waktu_keluar' => NULL
-        );
-        $absen = $this->absen_model->where($where);
-        $pegawai = $this->pegawai_model->all();
+        // $today = date('Y-m-d');
+        // $where = array(
+        //     'date(absen.waktu_masuk)' => $today,
+        //     'absen.waktu_keluar' => NULL
+        // );
+        // $absen = $this->absen_model->where($where);
+        $where = array('posisi' => 'Tetap');
+        $pegawai = $this->pegawai_model->where($where);
 
         $view_data = compact('pegawai');
 
