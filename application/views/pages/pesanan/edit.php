@@ -54,7 +54,7 @@
                         <div class="col-12">
                             <div class="card card-primary card-outline">
                                 <div class="card-header">
-                                    <h5 class="float-left mb-0 mt-2">Tambah Pesanan</h5>
+                                    <h5 class="float-left mb-0 mt-2">Edit Pesanan</h5>
                                 </div>
 
                                 <?php echo form_open('pesanan/update'); ?>
